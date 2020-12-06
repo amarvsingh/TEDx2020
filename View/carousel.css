@@ -3,85 +3,16 @@
     padding:0;
 }
 
-
 #carousel-header{
     text-align: center;
 }
 
-
- /* #slider{
-    height: 35vw;
-    position: relative;
-    perspective: 1000px;
-    transform-style: preserve-3d;
+#carousel-container{
+    width:80vw;
+    height:80vh;
 }
 
-#slider label{
-    margin:auto;
-    width:60%;
-    height:100%;
-    border-radius: 4rem;
-    position:absolute;
-    left:0;
-    right:0;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-} */
-
-/* CSS Animations for carousel happen here */
-/* #p1:checked ~ #slide4, #p2:checked ~ #slide5,
-#p3:checked ~ #slide1, #p4:checked ~ #slide2,
-#p5:checked ~ #slide3{
-    box-shadow: 0 1rem 4rem 0 rgba(0,0,0,.37);
-    
-    transform: scale(.5);
-    transform: translate(-30%, 0) translateZ(-200px);
-
-}
-
-#p1:checked ~ #slide5, #p2:checked ~ #slide1,
-#p3:checked ~ #slide2, #p4:checked ~ #slide3,
-#p5:checked ~ #slide4{
-    box-shadow: 0 3rem 5rem 0 rgba(0,0,0,.3), 0 1rem 1rem 0 rgba(0,0,0,0.2);
-    
-    transform: scale(.75);
-    transform: translate(-15%, 0) translateZ(-100px);
-}
-
-#p1:checked ~ #slide1, #p2:checked ~ #slide2,
-#p3:checked ~ #slide3, #p4:checked ~ #slide4,
-#p5:checked ~ #slide5{
-    box-shadow: 0 4rem 10rem 0 rgba(0,0,0,.3), 0 5.5rem 3.5rem 0 rgba(0,0,0,0.19);
-    
-    transform: scale(1);
-    transform: translate(0, 0) translateZ(0);
-}
-
-#p1:checked ~ #slide2, #p2:checked ~ #slide3,
-#p3:checked ~ #slide4, #p4:checked ~ #slide5,
-#p5:checked ~ #slide1{
-    box-shadow: 0 3rem 5rem 0 rgba(0,0,0,.3), 0 1rem 1rem 0 rgba(0,0,0,0.2);
-    transform: scale(.75);
-    transform: translate(15%, 0) translateZ(-100px);
-    
-}
-
-#p1:checked ~ #slide3, #p2:checked ~ #slide4,
-#p3:checked ~ #slide5, #p4:checked ~ #slide1,
-#p5:checked ~ #slide2{
-    box-shadow: 0 1rem 5rem 0 rgba(10, 4, 4, 0.37);
-    transform: scale(.5);
-    transform: translate(30%, 0) translateZ(-200px);
-} */
-
-#innerCarousel{
-    height: 80vh;
-    width: 100vw;
-    background: #eee;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.img-fluid{
-    height: 80vh;
+.carousel-item{
+    max-height:80vh;
+    max-width:80vw;
 }
