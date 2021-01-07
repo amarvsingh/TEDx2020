@@ -2,8 +2,10 @@
 var canvas;
 var width, height;
 var xes = [];
-var no = 100;
-
+var no = 50;
+//enhance X's make it bigger and bold
+//slight shadow if possible
+//color scheme of X's should
 
 function setup() {
     width = document.getElementById('about-background').offsetWidth;
@@ -17,7 +19,7 @@ function setup() {
   
   function draw() {
     if(isInViewport(document.getElementById('about-background'))){
-      background(230);
+      background(document.body.style.backgroundColor); //sets background colour for the canvas
       for(let i=0 ;i<no; i++){
         xes[i].show();
         xes[i].update();
@@ -47,18 +49,21 @@ function setup() {
       this.vel = p5.Vector.random2D();
       this.acc = createVector();
       this.r = random();
-      this.rate = random(0, 0.05);
-      this.c = color('hsba(160, 100%, 50%, 0.5)');
+      this.rate = random(0.01, 0.025);
+      this.c = color('#E62B1E');
 
 
       this.show = function(){
           translate(this.pos.x,this.pos.y);
           fill(200);
-          strokeWeight(3.5);
-          stroke(this.c);
+
           rotate(this.r);
-          line(0,0,22.5,25);
-          line(22.5,0,0,25);          
+          strokeWeight(4);
+          stroke(this.c);
+          line(0,0,25,30);
+          line(25,0,0,30);
+          
+
           this.r += this.rate;       
           resetMatrix();
       }
@@ -78,3 +83,4 @@ function setup() {
            this.acc.mult(0);
       }
   }
+
