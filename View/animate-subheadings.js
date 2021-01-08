@@ -1,14 +1,17 @@
 
+var textWrapper = document.getElementsByClassName('letters'); //gets array of elements with class name letters
+for(let i=0;i<textWrapper.length;i++){
+  textWrapper[i].innerHTML = textWrapper[i].textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  //replaces each letter with a span class like so: "<span class="letter"> A </span>"
+}
 
-// get the element to animate
+var elements = document.getElementsByClassName('subheading');//gets all subheadings
 
-var textWrapper4 = document.querySelector('.ml4 .letters');
-textWrapper4.innerHTML = textWrapper4.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+//add a property to determine if an element has been animated or not
+for(let i=0;i<elements.length;i++){
+  elements[i].hasBeenAnimated = "false"; //originally it is false
+}
 
-var element = document.getElementById('about-subheading');
-var elementHeight = element.clientHeight;
-
-let pc = 0;
 // listen for scroll event and call animate function
 document.addEventListener('scroll', animate);
 
@@ -28,24 +31,29 @@ function inView(elem) {
   return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
 }
 
+
 // animate element when it is in view
+//this function is called when user scrolls
 function animate() {
-  if (inView(element)) {
-      //fire animation everytime the user scrolls and the element is in the view
-      if(pc == 0){
+
+    for(let i=0;i<elements.length;i++){
+    if (inView(elements[i]) && elements[i].hasBeenAnimated==="false") {
+      //fire animation everytime the user scrolls, element is in the view and has not been animated before
       anime.timeline({loop: false})
         .add({
-          targets: '.ml4 .letter',
+          targets: '.subheading .letter',
           scale: [0, 1],
           duration: 1500,
           elasticity: 600,
           delay: (_el, i) => 45 * (i+1)
         });
-        pc++;
-      }
+        elements[i].hasBeenAnimated = "true";
   }
+  if(!inView(elements[i])){
+    elements[i].hasBeenAnimated = "false";
+    //if element is out of view change property so it is animated when it is next in view
+  }
+}
 
-  if(!inView(element)){
-    pc = 0;
-  }
+
 }

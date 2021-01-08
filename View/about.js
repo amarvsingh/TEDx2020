@@ -3,9 +3,9 @@ var canvas;
 var width, height;
 var xes = [];
 var no = 50;
-//enhance X's make it bigger and bold
-//slight shadow if possible
-//color scheme of X's should
+//enhance X's make it bigger and bold - DONE
+//slight shadow if possible - LOOKS BAD
+//color scheme of X's should look nicer - 
 
 function setup() {
     width = document.getElementById('about-background').offsetWidth;
