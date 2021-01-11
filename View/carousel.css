@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#carousel-header{
+    text-align: center;
+}
+
+#carousel-container{
+    width:80vw;
+    height:80vh;
+}
+
+.carousel-item{
+    max-height:80vh;
+    max-width:80vw;
+}

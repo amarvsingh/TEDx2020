@@ -1,0 +1,61 @@
+#about-background{
+    position:relative;
+    padding:0;
+    margin:0;
+    min-height : 70vh;
+    width: 100%;
+    overflow:hidden;
+    border: solid black;
+
+}
+
+#about-top{
+    height: 50%;
+    border: maroon solid;
+}
+
+
+#about-bottom{
+    height: 50%;
+    border: brown solid;    
+}
+
+#defaultCanvas0{
+     position: absolute; 
+     top:0;
+     left:0;
+     z-index:-1;
+}
+
+.about-text-div{
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.5s;
+    background: white;
+    opacity: 0.85;
+    border-radius: 1em;
+}
+
+.about-text-div:hover{
+    
+    opacity: 0.95;
+    
+}
+
+.about-text{
+    opacity: 1;
+    color: black;
+    transition: 0.5s;
+}
+
+.about-text:hover{
+    transform: scale(1.05);
+}
+
+h3{
+    font-family: sans-serif;
+    position: relative;
+    font-weight: 200;
+    font-size: 2em;
+    margin-top: 1em;
+}

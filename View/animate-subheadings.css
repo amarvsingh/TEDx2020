@@ -1,0 +1,21 @@
+  .subheading {
+    font-family: sans-serif;
+    position: relative;
+    font-weight: 200;
+    font-size: 3em;
+  }
+  
+  .subheading .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .subheading .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
