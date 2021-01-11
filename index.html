@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <!-- 
   Instructions:
@@ -24,14 +24,85 @@
     <link rel="stylesheet" href="View/animate-subheadings.css" type="text/css">
     <link rel="stylesheet" href="View/carousel.css" type="text/css">
     <link rel="stylesheet" href="View/about.css" type="text/css">
-
+    
+    <!--Css for rolling images-->
     <link rel="stylesheet" href="./View/rollingImages.css">
+    
+    <!--Scripts Introduced by Meeti-->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
 
 
     <title>TedX2020 Website</title>
 </head>
 
 <body>
+  
+    <nav>
+      <div class="logo">TedX SVV</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Attend TedX</a></li>
+        <li>
+          <label for="btn-1" class="show">Speakers +</label>
+          <a href="#">Speakers</a>
+          <input type="checkbox" id="btn-1">
+          <ul>
+            <li><a href="#">2017</a></li>
+            <li><a href="#">2018</a></li>
+            <li><a href="#">2019</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-2" class="show">Team +</label>
+          <a href="#">Team</a>
+          <input type="checkbox" id="btn-2">
+          <ul>
+            <li><a href="#">2017</a></li>
+            <li><a href="#">2018</a></li>
+            <li><a href="#">2019</a></li>
+            <li><a href="#">2020</a></li>
+            <li>
+              <label for="btn-3" class="show">More +</label>
+              <a href="#">More <span class="fa fa-plus"></span></a>
+              <input type="checkbox" id="btn-3">
+              <ul>
+                <li><a href="#">Submenu-1</a></li>
+                <li><a href="#">Submenu-2</a></li>
+                <li><a href="#">Submenu-3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-1" class="show">Sponsors +</label>
+          <a href="#">Sponsors</a>
+          <input type="checkbox" id="btn-1">
+          <ul>
+            <li><a href="#">Become One</a></li>
+            <li><a href="#">2018</a></li>
+            <li><a href="#">2019</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Newsletter/Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <header>Responsive Drop-down Menu Bar</header>
+      <p>HTML and CSS (Media Query)</p>
+    </div>
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
 
     <h1 class="text-center subheading"><span class="text-wrapper">
             <span class="letters">Events</span>
@@ -193,5 +264,4 @@
     <script src="View/about.js"></script>
     <script src="View/animate-subheadings.js"></script>
 </body>
-
 </html>
