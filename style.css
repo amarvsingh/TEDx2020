@@ -6,16 +6,23 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
   background: #f2f2f2;
 }
 nav{
   background: #1b1b1b;
+  width: 100%;
 }
 nav:after{
   content: '';
   clear: both;
   display: table;
+}
+.fixed {
+    position:fixed;
+    top:0;
+    width: 100%;
 }
 nav .logo{
   float: left;
@@ -159,17 +166,23 @@ nav ul ul ul li{
   span.cancel:before{
     content: '\f00d';
   }
+  .content{
+    z-index: -1;
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+    
+
 }
 .content{
   z-index: -1;
   position: absolute;
-  top: 50%;
+  top: 180%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
 }
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
+
