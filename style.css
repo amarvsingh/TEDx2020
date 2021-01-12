@@ -17,6 +17,11 @@ nav:after{
   clear: both;
   display: table;
 }
+.fixed {
+    position:fixed;
+    top:0;
+    width: 100%;
+}
 nav .logo{
   float: left;
   color: white;
