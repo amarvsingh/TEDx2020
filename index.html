@@ -33,13 +33,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
-
-
-    <title>TedX2020 Website</title>
 </head>
-
-<body>
   
+  <body>
+    <div class="navbar"> 
     <nav>
       <div class="logo">TedX SVV</div>
       <label for="btn" class="icon">
@@ -94,17 +91,9 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
+  </div>
     <div class="content">
-      <header>Responsive Drop-down Menu Bar</header>
-      <p>HTML and CSS (Media Query)</p>
-    </div>
-    <script>
-      $('.icon').click(function(){
-        $('span').toggleClass("cancel");
-      });
-    </script>
-
-    <h1 class="text-center subheading"><span class="text-wrapper">
+      <h1 class="text-center subheading"><span class="text-wrapper">
             <span class="letters">Events</span>
         </span>
 
@@ -241,8 +230,23 @@
                 </div>
             </div>
         </div>
+    </div>      
     </div>
+    <script>
+      var num = 0;
+      $(window).bind('scroll', function () {
+    if ($(window).scrollTop() > num) {
+        $('.navbar').addClass('fixed');
+    } else {
+        $('.navbar').removeClass('fixed');
+    }
+   });
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
 
+    
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
