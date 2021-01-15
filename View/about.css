@@ -46,6 +46,7 @@
     opacity: 1;
     color: black;
     transition: 0.5s;
+    font-size: 1.15vw;
 }
 
 .about-text:hover{
@@ -56,6 +57,17 @@ h3{
     font-family: sans-serif;
     position: relative;
     font-weight: 200;
-    font-size: 2em;
+    font-size: 2.5vw;
     margin-top: 1em;
+}
+@media all and (max-width: 968px) {
+    .about-text{
+        font-size: 3vw;
+    }
+    h3{
+        font-size: 6vw;
+    }
+    .about-text:hover{
+        transform: scale(1.05);
+    }
 }

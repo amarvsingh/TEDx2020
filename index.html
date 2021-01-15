@@ -33,10 +33,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="navigation">
+    
         <nav>
             <div class="logo">TedX SVV</div>
             <label for="btn" class="icon">
@@ -78,9 +79,9 @@
                     </ul>
                 </li>
                 <li>
-                    <label for="btn-1" class="show">Sponsors +</label>
+                    <label for="btn-4" class="show">Sponsors +</label>
                     <a href="#">Sponsors</a>
-                    <input type="checkbox" id="btn-1">
+                    <input type="checkbox" id="btn-4">
                     <ul>
                         <li><a href="#">Become One</a></li>
                         <li><a href="#">2018</a></li>
@@ -91,10 +92,11 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-    </div>
+ 
     <div class="content">
 
-        <h1 class="text-center subheading"><span class="text-wrapper">
+        <h1 class="text-center subheading">
+            <span class="text-wrapper">
                 <span class="letters">Events</span>
             </span>
 
@@ -138,7 +140,7 @@
         </div>
 
         <!--Here goes the code for the Rolling images just below the Carousel-->
-        <div class="marquee-wrapper">
+        <!-- <div class="marquee-wrapper">
             <div class="marquee-block">
                 <div class="marquee-inner to-left">
                     <span>
@@ -157,8 +159,8 @@
                     </span>
                 </div>
             </div>
-        </div>
-
+        </div> -->
+        <!--About Section-->
         <h1 class="text-center subheading" id="about-subheading">
             <span class="text-wrapper">
                 <span class="letters">About</span>
@@ -240,15 +242,53 @@
                     </div>
                 </div>
             </div>
+        </div> 
+    
+    <!--SPonsors-->
+    
+
+        <div  class="fond">
+        <div >
+
+        <div id="zoom_1" class="style_prevu_kit" style="background-color:#cb2025;">A</div>
+        <div id="zoom_2" class="style_prevu_kit" style="background-color:#f8b334;">B</div>
+        <div id="zoom_3" class="style_prevu_kit" style="background-color:#97bf0d;">C</div>
+        <div id="zoom_4" class="style_prevu_kit" style="background-color:#00a096;">D</div>
+        <div id="zoom_5" class="style_prevu_kit" style="background-color:#93a6a8;">E</div>
+
+        <div id="zoom_6" class="style_prevu_kit" style="background-color:#138ae0;">F</div>
+        <div id="zoom_7" class="style_prevu_kit" style="background-color:#13e06a;">G</div>
+        <div id="zoom_8" class="style_prevu_kit" style="background-color:#bb950f;">H</div>
+        <div id="zoom_9" class="style_prevu_kit" style="background-color:#a745bf;">I</div>
+        <div id="zoom_10" class="style_prevu_kit" style="background-color:#eb1b64;">J</div>
+
+        <div id="zoom_11" class="style_prevu_kit" style="background-color:#781beb;">K</div>
+        <div id="zoom_12" class="style_prevu_kit" style="background-color:#eb1b25;">L</div>
+        <div id="zoom_13" class="style_prevu_kit" style="background-color:#eb471b;">M</div>
+        <div id="zoom_14" class="style_prevu_kit" style="background-color:#00955b;">N</div>
+        <div id="zoom_15" class="style_prevu_kit" style="background-color:#eb7966;">O</div>
+
+        <div id="zoom_16" class="style_prevu_kit" style="background-color:#7c5003;">P</div>
+        <div id="zoom_17" class="style_prevu_kit" style="background-color:#4da1a9;">Q</div>
+        <div id="zoom_18" class="style_prevu_kit" style="background-color:#a4f0f5;">R</div>
+        <div id="zoom_19" class="style_prevu_kit" style="background-color:#399f0c;">S</div>
+        <div id="zoom_20" class="style_prevu_kit" style="background-color:#80784d;">T</div>
+
+
+        <div style=" padding:5px; color:#b5e6e3; font-weight:300; font-size:30px; font-family:'Roboto';padding-top:20px;">Script Auto Mode</div>
+            
+        
+        </div>
         </div>
     </div>
+     <!--Nav Bar Script for Sticky-->
     <script>
         var num = 0;
         $(window).bind('scroll', function () {
             if ($(window).scrollTop() > num) {
-                $('.navigation').addClass('fixed');
+                $('nav').addClass('fixed');
             } else {
-                $('.navigation').removeClass('fixed');
+                $('nav').removeClass('fixed');
             }
         });
         $('.icon').click(function () {
@@ -277,6 +317,26 @@
 
     <script src="View/about.js"></script>
     <script src="View/animate-subheadings.js"></script>
+    <!--Scipt for Sponsors-->    
+    <script> $(document).ready(function(){
+       
+        var i=1;
+        var class_length=$(".style_prevu_kit").length;
+        setInterval(function(){
+                if(i<=class_length){
+                  $("#zoom_"+i).addClass("zoombox");     
+                }else
+                {
+                 $(".style_prevu_kit").removeClass("zoombox");
+                   i=0;
+                }
+               //  $("#zoom_"+i).addClass("  "); 
+                  i++;
+            
+            }, 1000);
+        
+        
+        })</script>
 </body>
 
 </html>
