@@ -19,21 +19,36 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--Road map links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800'>
+   
     <!-- Normal CSS -->
     <link rel="stylesheet" href="View/animate-subheadings.css" type="text/css">
     <link rel="stylesheet" href="View/carousel.css" type="text/css">
     <link rel="stylesheet" href="View/about.css" type="text/css">
 
-    <!--Css for rolling images-->
-    <link rel="stylesheet" href="./View/rollingImages.css">
+    
 
     <!--Scripts Introduced by Meeti-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Road map-->
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+   
+  
 </head>
 
 <body>
@@ -91,17 +106,17 @@
                 <li><a href="#">Newsletter/Blogs</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
-        </nav>
+        </nav> 
  
     <div class="content">
 
-        <h1 class="text-center subheading">
+       <h1 class="text-center subheading">
             <span class="text-wrapper">
                 <span class="letters">Events</span>
             </span>
 
         </h1>
-        <div class="container" id="carousel-container">
+        <div class="carousel-container" id="carousel-container">
             <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -137,36 +152,15 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-        </div>
+        </div> 
 
-        <!--Here goes the code for the Rolling images just below the Carousel-->
-        <!-- <div class="marquee-wrapper">
-            <div class="marquee-block">
-                <div class="marquee-inner to-left">
-                    <span>
-                        <img src="./Asset/testIMG1.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG2.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG3.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG1.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG2.jpg" class="marquee-item">
-                    </span>
-                    <span>
-                        <img src="./Asset/testIMG1.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG2.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG3.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG1.jpg" class="marquee-item">
-                        <img src="./Asset/testIMG2.jpg" class="marquee-item">
-                    </span>
-                </div>
-            </div>
-        </div> -->
+        
         <!--About Section-->
-        <h1 class="text-center subheading" id="about-subheading">
+         <h1 class="text-center subheading" id="about-subheading"> 
             <span class="text-wrapper">
                 <span class="letters">About</span>
             </span>
         </h1>
-
         <div class="container-fluid">
             <div id="about-background" class="container-fluid">
                 <div class="container">
@@ -242,11 +236,62 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>  
     
-    <!--SPonsors-->
-    
+    </div>
+    <!-- Roadmap  -->
+    <div class="roadmap-container">
+        <div class="timeline">
+            <div class="swiper-container swiper-container-vertical">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-active"
+                        style="background-image: url('https://unsplash.it/1920/500?image=11'); height: 600px; width: 100%;"
+                        data-year="2011">
+                        <div class="swiper-slide-content"><span class="timeline-year">2011</span>
+                            <h4 class="timeline-title">Our nice super title</h4>
+                            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do
+                                eisumod
+                                tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next"
+                        style="background-image: url('https://unsplash.it/1920/500?image=12'); height: 600px; width: 100%;"
+                        data-year="2012">
+                        <div class="swiper-slide-content"><span class="timeline-year">2012</span>
+                            <h4 class="timeline-title">Our nice super title</h4>
+                            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do
+                                eisumod
+                                tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image: url('https://unsplash.it/1920/500?image=13'); height: 600px; width: 100%;"
+                        data-year="2013">
+                        <div class="swiper-slide-content"><span class="timeline-year">2013</span>
+                            <h4 class="timeline-title">Our nice super title</h4>
+                            <p class="timeline-text">Lorem ipsum dolor site amet, consectetur adipscing elit, sed do
+                                eisumod
+                                tempor incididut ut labore et dolore magna aliqua. Ut enim ad mimim venjam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
 
+
+
+                </div>
+                <div class="swiper-button-prev swiper-button-disabled"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+                        class="swiper-pagination-bullet swiper-pagination-bullet-active">2011</span><span
+                        class="swiper-pagination-bullet">2012</span><span class="swiper-pagination-bullet">2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+     <!--SPonsors-->
         <div  class="fond">
         <div >
 
@@ -279,7 +324,7 @@
             
         
         </div>
-        </div>
+        </div> 
     </div>
      <!--Nav Bar Script for Sticky-->
     <script>
@@ -296,8 +341,32 @@
         });
     </script>
 
+    <!--Roadmap Script  -->
+    <script
+        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
+    <script id="rendered-js">
+        var timelineSwiper = new Swiper('.timeline .swiper-container', {
+            direction: 'vertical',
+            loop: false,
+            speed: 1600,
+            pagination: '.swiper-pagination',
+            paginationBulletRender: function (swiper, index, className) {
+                var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+                return '<span class="' + className + '">' + year + '</span>';
+            },
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            breakpoints: {
+                768: {
+                    direction: 'horizontal'
+                }
+            }
+        });
+//# sourceURL=pen.js
+    </script>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -317,7 +386,7 @@
 
     <script src="View/about.js"></script>
     <script src="View/animate-subheadings.js"></script>
-    <!--Scipt for Sponsors-->    
+    <!--Script for Sponsors-->    
     <script> $(document).ready(function(){
        
         var i=1;
