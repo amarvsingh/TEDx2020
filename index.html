@@ -15,7 +15,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- AOS for animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -31,10 +34,9 @@
     <link rel="stylesheet" href="View/about.css" type="text/css">
 
     
-
     <!--Scripts Introduced by Meeti-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="View/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -47,22 +49,34 @@
             window.parent.postMessage("resize", "*");
         }
     </script>
+     <!-- Scripts For Footer -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
    
   
 </head>
 
 <body>
-    
+    <div class="section-1">
+            
+        <div class="left-section" data-aos="fade-right">
+            <div class="tagline">Tagline / Theme </div>
+            <div class="text-below-tagline">Lorem Ipsum is simply dummy text of the printing and 
+                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                make a type specimen book.</div>
+        </div>
         <nav>
-            <div class="logo">TedX SVV</div>
+            <div class="logo" data-aos="zoom-out">TedX SVV</div>
             <label for="btn" class="icon">
                 <span class="fa fa-bars"></span>
             </label>
             <input type="checkbox" id="btn">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Attend TedX</a></li>
-                <li>
+                <li><a href="#" data-aos="zoom-out">About</a></li>
+                <li><a href="#" data-aos="zoom-out">Attend TedX</a></li>
+                <li data-aos="zoom-out">
                     <label for="btn-1" class="show">Speakers +</label>
                     <a href="#">Speakers</a>
                     <input type="checkbox" id="btn-1">
@@ -72,8 +86,8 @@
                         <li><a href="#">2019</a></li>
                     </ul>
                 </li>
-                <li>
-                    <label for="btn-2" class="show">Team +</label>
+                <li data-aos="zoom-out">
+                    <label for="btn-2" class="show" >Team +</label>
                     <a href="#">Team</a>
                     <input type="checkbox" id="btn-2">
                     <ul>
@@ -93,7 +107,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li data-aos="zoom-out">
                     <label for="btn-4" class="show">Sponsors +</label>
                     <a href="#">Sponsors</a>
                     <input type="checkbox" id="btn-4">
@@ -103,20 +117,37 @@
                         <li><a href="#">2019</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Newsletter/Blogs</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li data-aos="zoom-out"><a href="#">Newsletter/Blogs</a></li>
+                <li data-aos="zoom-out"><a href="#">Contact Us</a></li>
             </ul>
         </nav> 
+        <div class="section-intro" data-aos="fade-left">
+               
+            
+                <div class=" Iam" data-aos="fade-up" data-aos-duration="3000">
+
+                    
+                    <b>
+                        <p>This is</p>
+                      <div class="innerIam">
+                        leggera<br /> 
+                        a theme in progress<br />
+                        built on bootstrap<br />
+                        how I learn stuff<br />
+                        how we do it
+                        </div>
+                    </b>
+                    
+                    </div>
+           
+                
+        </div>
+    </div>
  
-    <div class="content">
-
-       <h1 class="text-center subheading">
-            <span class="text-wrapper">
-                <span class="letters">Events</span>
-            </span>
-
-        </h1>
-        <div class="carousel-container" id="carousel-container">
+    <div class="content" data-aos="fade-up">
+       
+       <div class="headings-of-sections">Events</div>
+        <div class="carousel-container" id="carousel-container" data-aos="fade-up">
             <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -156,11 +187,7 @@
 
         
         <!--About Section-->
-         <h1 class="text-center subheading" id="about-subheading"> 
-            <span class="text-wrapper">
-                <span class="letters">About</span>
-            </span>
-        </h1>
+        <div class="headings-of-sections">About</div>
         <div class="container-fluid">
             <div id="about-background" class="container-fluid">
                 <div class="container">
@@ -240,7 +267,9 @@
     
     </div>
     <!-- Roadmap  -->
-    <div class="roadmap-container">
+    <div class="content">  <div class="headings-of-sections">RoadMap</div></div>
+   
+    <div class="roadmap-container" data-aos="fade-up">
         <div class="timeline">
             <div class="swiper-container swiper-container-vertical">
                 <div class="swiper-wrapper">
@@ -290,42 +319,105 @@
             </div>
         </div>
     </div>
-    <div class="content">
-     <!--SPonsors-->
+    <!-- Sponsors -->
+    
+    <div class="content" data-aos="fade-up">
+        <div class="headings-of-sections">Sponsors</div>
+     <!--SPonsors and footer-->
         <div  class="fond">
-        <div >
+            
+        <div>
 
         <div id="zoom_1" class="style_prevu_kit" style="background-color:#cb2025;">A</div>
-        <div id="zoom_2" class="style_prevu_kit" style="background-color:#f8b334;">B</div>
-        <div id="zoom_3" class="style_prevu_kit" style="background-color:#97bf0d;">C</div>
-        <div id="zoom_4" class="style_prevu_kit" style="background-color:#00a096;">D</div>
-        <div id="zoom_5" class="style_prevu_kit" style="background-color:#93a6a8;">E</div>
+        <div id="zoom_2" class="style_prevu_kit" style="background-color:#cb2025;">B</div>
+        <div id="zoom_3" class="style_prevu_kit" style="background-color:#cb2025;">C</div>
+        <div id="zoom_4" class="style_prevu_kit" style="background-color:#cb2025;">D</div>
+        <div id="zoom_5" class="style_prevu_kit" style="background-color:#cb2025;">E</div>
 
-        <div id="zoom_6" class="style_prevu_kit" style="background-color:#138ae0;">F</div>
-        <div id="zoom_7" class="style_prevu_kit" style="background-color:#13e06a;">G</div>
-        <div id="zoom_8" class="style_prevu_kit" style="background-color:#bb950f;">H</div>
-        <div id="zoom_9" class="style_prevu_kit" style="background-color:#a745bf;">I</div>
-        <div id="zoom_10" class="style_prevu_kit" style="background-color:#eb1b64;">J</div>
-
-        <div id="zoom_11" class="style_prevu_kit" style="background-color:#781beb;">K</div>
-        <div id="zoom_12" class="style_prevu_kit" style="background-color:#eb1b25;">L</div>
-        <div id="zoom_13" class="style_prevu_kit" style="background-color:#eb471b;">M</div>
-        <div id="zoom_14" class="style_prevu_kit" style="background-color:#00955b;">N</div>
-        <div id="zoom_15" class="style_prevu_kit" style="background-color:#eb7966;">O</div>
-
-        <div id="zoom_16" class="style_prevu_kit" style="background-color:#7c5003;">P</div>
-        <div id="zoom_17" class="style_prevu_kit" style="background-color:#4da1a9;">Q</div>
-        <div id="zoom_18" class="style_prevu_kit" style="background-color:#a4f0f5;">R</div>
-        <div id="zoom_19" class="style_prevu_kit" style="background-color:#399f0c;">S</div>
-        <div id="zoom_20" class="style_prevu_kit" style="background-color:#80784d;">T</div>
-
-
-        <div style=" padding:5px; color:#b5e6e3; font-weight:300; font-size:30px; font-family:'Roboto';padding-top:20px;">Script Auto Mode</div>
-            
+        <div id="zoom_6" class="style_prevu_kit" style="background-color:#cb2025;">F</div>
+        <div id="zoom_7" class="style_prevu_kit" style="background-color:#cb2025;">G</div>
+        <div id="zoom_8" class="style_prevu_kit" style="background-color:#cb2025;">H</div>
+        <div id="zoom_9" class="style_prevu_kit" style="background-color:#cb2025;">I</div>
+        <div id="zoom_10" class="style_prevu_kit" style="background-color:#cb2025;">J</div>
         
+        <div id="zoom_6" class="style_prevu_kit" style="background-color:#cb2025;">F</div>
+        <div id="zoom_7" class="style_prevu_kit" style="background-color:#cb2025;">G</div>
+
+
+
         </div>
         </div> 
+       <!-- Google Map -->
+       <div class="content"><div class="headings-of-sections">Come Find Us</div></div>
+    <div class="loc">
+					  
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.787241671561!2d72.89763341437673!3d19.07308975702154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c627a20bcaa9%3A0xb2fd3bcfeac0052a!2sK.+J.+Somaiya+College+of+Engineering!5e0!3m2!1sen!2sin!4v1549607477111" width="1300" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+         </div>
     </div>
+    
+     <!-- Footer Code comes here -->
+     <div style="background: #262626;">
+        <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+            <footer>
+                <div class="row my-5 justify-content-center py-5">
+                    <div class="col-11">
+                        <div class="row ">
+                            <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                                <h3 class="text-muted mb-md-0 mb-5 bold-text">Pepper.</h3>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                                <ul class="list-unstyled">
+                                    <li>Home</li>
+                                    <li>About</li>
+                                    <li>Blog</li>
+                                    <li>Portfolio</li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                                <p class="mb-1">605, RATAN ICON BUILDING</p>
+                                <p>SEAWOODS SECTOR</p>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div
+                                class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                                <p class="social text-muted mb-0 pb-0 bold-text">
+                                <div id="social-test">
+                                    <ul class="social">
+                                        <li><a href="https://facebook.com/colorlib"><i class="fa fa-facebook"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li><a href="https://twitter.com/colorlib"><i class="fa fa-twitter"
+                                                    aria-hidden="true"></a></i></li>
+                                        <li><a href="https://instagram.com/colorlib"><i class="fa fa-instagram"
+                                                    aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.youtube.com/c/Colorlib"><i class="fa fa-youtube"
+                                                    aria-hidden="true"></a></i></li>
+                                    </ul>
+                                </div>
+                                </p>
+                                <small class="rights"><span>&#174;</span> Pepper All Rights Reserved.</small>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                                <h6 class="mt-55 mt-2 text-muted bold-text"><b>ANIRUDH SINGLA</b></h6><small> <span><i
+                                            class="fa fa-envelope" aria-hidden="true"></i></span>
+                                    anirudh@gmail.com</small>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+                                <h6 class="text-muted bold-text"><b>RISHABH SHEKHAR</b></h6><small><span><i
+                                            class="fa fa-envelope" aria-hidden="true"></i></span>
+                                    rishab@gmail.com</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
      <!--Nav Bar Script for Sticky-->
     <script>
         var num = 0;
@@ -406,6 +498,13 @@
         
         
         })</script>
+    
+<script>
+     AOS.init({
+        duration: 1200,
+    })
+
+</script>   
 </body>
 
 </html>
