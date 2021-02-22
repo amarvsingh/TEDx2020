@@ -3,13 +3,20 @@
     <title>Editable Neumorphic Text</title>
 	<link rel="stylesheet" href="View/speaker.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 </head>
 <body>
-    <!-- <div class="logo1" data-aos="zoom-out">TedX SVV</div>
-    <div class="speakers-heading">
+     <div class="logo1" data-aos="zoom-out">TedX SVV</div>
+    <!-- <div class="speakers-heading">
         <span contenteditable="true">SPEAKERS 2017</span>
-    </div> -->
-    <div class="box">
+    </div>  -->
+    <!-- <div class="header-text" >SPEAKERS 2017</div> -->
+    <h1 class="ml15">
+      <span class="word">Speaker</span>
+      <span class="word">2017</span>
+    </h1>
+    <div class="box" style="margin-top: 200px;">
         <div class="card">
           <div class="imgBx">
               <img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images">
@@ -36,7 +43,52 @@
               <h2>SomeOne Famous<br><span>Actor</span></h2>
             </div>
          </div>
-   
-    </div>
+         
+      <div class="card">
+        <div class="imgBx">
+            <img src="https://images.unsplash.com/photo-1532123675048-773bd75df1b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images">
+        </div>
+        <div class="details">
+            <h2>SomeOne Famous<br><span>Director</span></h2>
+        </div>
+      </div>
+    
+       <div class="card">
+         <div class="imgBx">
+            <img src="https://images.unsplash.com/photo-1549417229-aa67d3263c09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images">
+         </div>
+         <div class="details">
+            <h2>SomeOne Famous<br><span>Producer</span></h2>
+          </div>
+       </div>
+
+       <div class="card">
+         <div class="imgBx">
+            <img src="https://images.unsplash.com/photo-1548094878-84ced0f6896d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="images">
+         </div>
+         <div class="details">
+            <h2>SomeOne Famous<br><span>Actor</span></h2>
+          </div>
+       </div>
+       
+  </div>
+    
 </body>
+<script>
+  anime.timeline({loop: true})
+  .add({
+    targets: '.ml15 .word',
+    scale: [2,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 800,
+    delay: (el, i) => 800 * i
+  }).add({
+    targets: '.ml15',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
 </html>
